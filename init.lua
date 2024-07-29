@@ -83,7 +83,6 @@ I hope you enjoy your Neovim journey,
 
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
-
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -928,5 +927,10 @@ require('lazy').setup({
   },
 })
 
+--Custom entries from me!
+vim.keymap.set('n', '<leader>e', ':e <C-r>=expand("%:p:h")<CR>')
+vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
+require 'ThePrimeagen/vim-be-good'
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
