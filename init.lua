@@ -227,6 +227,7 @@ require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'Exafunction/codeium.vim', -- codeium install 08/14/2024
+  'ThePrimeagen/harpoon', -- harpoon install 08/18/2024
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
   -- keys can be used to configure plugin behavior/loading/etc.
@@ -853,6 +854,12 @@ require('lazy').setup({
         'c_sharp',
         'cpp',
         'javascript',
+        'typescript',
+        'python',
+        'css',
+        'json',
+        'yaml',
+        'toml',
       },
       -- Autoinstall languages that are not installed
       auto_install = true,
@@ -898,7 +905,7 @@ require('lazy').setup({
   require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
-
+  require 'custom.plugins.harpoon',
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --
